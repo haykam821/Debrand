@@ -1,0 +1,27 @@
+{
+	"schemaVersion": 1,
+	"id": "strippedbranding",
+	"version": "${version}",
+
+	"name": "Stripped Branding",
+	"description": "Removes the modded notice on the window title and title screen.",
+	"authors": [
+		"haykam821"
+	],
+	"contact": {
+		"homepage": "https://github.com/haykam821/Stripped-Branding#readme",
+		"issues": "https://github.com/haykam821/Stripped-Branding/issues"
+	},
+
+	"license": "MIT",
+	"icon": "assets/strippedbranding/icon.png",
+
+	"environment": "client",
+	"mixins": [
+		"strippedbranding.mixins.json"
+	],
+
+	"depends": {
+		"fabricloader": ">=0.4.0"
+	}
+}
