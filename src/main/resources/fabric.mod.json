@@ -1,32 +1,32 @@
 {
 	"schemaVersion": 1,
-	"id": "strippedbranding",
+	"id": "debrand",
 	"version": "${version}",
 
-	"name": "Stripped Branding",
+	"name": "Debrand",
 	"description": "Removes the modded notice on the window title and title screen.",
 	"authors": [
 		"haykam821"
 	],
 	"contact": {
-		"homepage": "https://github.com/haykam821/Stripped-Branding#readme",
-		"issues": "https://github.com/haykam821/Stripped-Branding/issues"
+		"homepage": "https://github.com/haykam821/Debrand#readme",
+		"issues": "https://github.com/haykam821/Debrand/issues"
 	},
 
 	"license": "MIT",
-	"icon": "assets/strippedbranding/icon.png",
+	"icon": "assets/debrand/icon.png",
 
 	"environment": "client",
 	"entrypoints": {
 		"main": [
-			"io.github.haykam821.strippedbranding.Main"
+			"io.github.haykam821.debrand.Main"
 		],
 		"modmenu": [
-			"io.github.haykam821.strippedbranding.config.ModMenuCompatibility"
+			"io.github.haykam821.debrand.config.ModMenuCompatibility"
 		]
 	},
 	"mixins": [
-		"strippedbranding.mixins.json"
+		"debrand.mixins.json"
 	],
 
 	"depends": {

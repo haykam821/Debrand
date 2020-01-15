@@ -1,4 +1,4 @@
-package io.github.haykam821.strippedbranding.config;
+package io.github.haykam821.debrand.config;
 
 import io.github.prospector.modmenu.api.ModMenuApi;
 import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
@@ -12,7 +12,7 @@ import java.util.function.Function;
 public class ModMenuCompatibility implements ModMenuApi {
 	@Override
 	public String getModId() {
-		return "strippedbranding";
+		return "debrand";
 	}
 
 	@Override

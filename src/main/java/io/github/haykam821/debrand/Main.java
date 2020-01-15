@@ -1,6 +1,6 @@
-package io.github.haykam821.strippedbranding;
+package io.github.haykam821.debrand;
 
-import io.github.haykam821.strippedbranding.config.ModConfig;
+import io.github.haykam821.debrand.config.ModConfig;
 import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
 import me.sargunvohra.mcmods.autoconfig1u.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ModInitializer;

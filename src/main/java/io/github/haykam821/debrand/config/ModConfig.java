@@ -1,9 +1,9 @@
-package io.github.haykam821.strippedbranding.config;
+package io.github.haykam821.debrand.config;
 
 import me.sargunvohra.mcmods.autoconfig1u.ConfigData;
 import me.sargunvohra.mcmods.autoconfig1u.annotation.*;
 
-@Config(name = "strippedbranding")
+@Config(name = "debrand")
 @Config.Gui.Background("minecraft:textures/block/orange_wool.png")
 public class ModConfig implements ConfigData {
 	@ConfigEntry.Category("modded")

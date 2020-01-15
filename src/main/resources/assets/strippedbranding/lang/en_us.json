@@ -1,8 +1,0 @@
-{
-	"text.autoconfig.strippedbranding.title": "Stripped Branding Configuration",
-	"text.autoconfig.strippedbranding.category.modded": "Modded Indication",
-	"text.autoconfig.strippedbranding.option.windowTitle": "Window Title",
-	"text.autoconfig.strippedbranding.option.windowTitle.@Tooltip": "If enabled, adds an asterisk to the window's title.",
-	"text.autoconfig.strippedbranding.option.titleScreen": "Title Screen",
-	"text.autoconfig.strippedbranding.option.titleScreen.@Tooltip": "If enabled, adds indication to the bottom-left corner of the title screen."
-}
