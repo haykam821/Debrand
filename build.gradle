@@ -15,8 +15,19 @@ minecraft {
 
 repositories {
 	maven {
+		name = "CottonMC"
+		url = "http://server.bbkr.space:8081/artifactory/libs-snapshot"
+	}
+	maven {
 		name = "Fabric"
 		url = "https://maven.fabricmc.net/"
+	}
+	maven {
+		name = "CurseForge"
+		url = "https://minecraft.curseforge.com/api/maven"
+	}
+    maven {
+		url = "https://dl.bintray.com/shedaniel/autoconfig1u/"
 	}
 	jcenter()
 }
@@ -26,6 +37,15 @@ dependencies {
 	minecraft("com.mojang:minecraft:${project.minecraft_version}")
 	mappings("net.fabricmc:yarn:${project.yarn_mappings}")
 	modImplementation("net.fabricmc:fabric-loader:${project.loader_version}")
+
+	// Configuration
+	modImplementation("me.shedaniel.cloth:config-2:2.6.5")
+	include("me.shedaniel.cloth:config-2:2.6.5")
+
+	modImplementation("me.sargunvohra.mcmods:autoconfig1u:1.2.4")
+	include("me.sargunvohra.mcmods:autoconfig1u:1.2.4")
+
+	modImplementation("io.github.prospector:modmenu:1.8.3+build.19")
 }
 
 processResources {

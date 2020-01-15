@@ -3,7 +3,8 @@
 	"package": "io.github.haykam821.strippedbranding.mixin",
 	"compatibilityLevel": "JAVA_8",
 	"client": [
-		"MinecraftClientMixin"
+		"MinecraftClientMixin",
+		"TitleScreenMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
