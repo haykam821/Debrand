@@ -17,4 +17,13 @@ public class ModConfig implements ConfigData {
 		@ConfigEntry.Gui.Tooltip
 		public boolean titleScreen = false;
 	}
+
+	@ConfigEntry.Category("brand")
+	@ConfigEntry.Gui.TransitiveObject
+	public BrandIndicationConfig brand = new BrandIndicationConfig();
+
+	public static class BrandIndicationConfig {
+		@ConfigEntry.Gui.Tooltip
+		public boolean debugMenu = true;
+	}
 }

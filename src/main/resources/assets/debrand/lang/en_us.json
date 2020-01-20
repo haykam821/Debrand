@@ -4,5 +4,8 @@
 	"text.autoconfig.debrand.option.windowTitle": "Window Title",
 	"text.autoconfig.debrand.option.windowTitle.@Tooltip": "If enabled, adds an asterisk to the window's title.",
 	"text.autoconfig.debrand.option.titleScreen": "Title Screen",
-	"text.autoconfig.debrand.option.titleScreen.@Tooltip": "If enabled, adds indication to the bottom-left corner of the title screen."
+	"text.autoconfig.debrand.option.titleScreen.@Tooltip": "If enabled, adds indication to the bottom-left corner of the title screen.",
+	"text.autoconfig.debrand.category.brand": "Brand Indication",
+	"text.autoconfig.debrand.option.debugMenu": "Debug Menu",
+	"text.autoconfig.debrand.option.debugMenu.@Tooltip": "If enabled, shows the client brand in the debug menu."
 }
