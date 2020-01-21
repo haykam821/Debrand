@@ -45,7 +45,8 @@ dependencies {
 	modImplementation("me.sargunvohra.mcmods:autoconfig1u:1.2.4")
 	include("me.sargunvohra.mcmods:autoconfig1u:1.2.4")
 
-	modImplementation("io.github.prospector:modmenu:1.8.3+build.19")
+	modImplementation("io.github.prospector:modmenu:1.8.5+build.23")
+	include("io.github.prospector:modmenu:1.8.5+build.23")
 }
 
 processResources {
