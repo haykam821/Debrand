@@ -11,11 +11,11 @@ import org.spongepowered.asm.mixin.injection.At;
 
 @Mixin(MinecraftClient.class)
 public class MinecraftClientMixin {
-	@Redirect(method = "method_24287", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/MinecraftClient;method_24289()Z"))
-	public boolean method_24289(MinecraftClient client) {
+	@Redirect(method = "getWindowTitle", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/MinecraftClient;isModded()Z"))
+	public boolean isModded(MinecraftClient client) {
 		ModConfig config = AutoConfig.getConfigHolder(ModConfig.class).getConfig();
 
 		if (!config.modded.windowTitle) return false;
-		return client.method_24289();
+		return client.isModded();
 	}
 }

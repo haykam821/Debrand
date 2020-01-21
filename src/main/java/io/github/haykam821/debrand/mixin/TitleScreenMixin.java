@@ -12,10 +12,10 @@ import org.spongepowered.asm.mixin.injection.At;
 
 @Mixin(TitleScreen.class)
 public class TitleScreenMixin {
-	@Redirect(method = "render", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/MinecraftClient;method_24289()Z"))
-	public boolean method_24289(MinecraftClient client) {
+	@Redirect(method = "render", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/MinecraftClient;isModded()Z"))
+	public boolean isModded(MinecraftClient client) {
 		ModConfig config = AutoConfig.getConfigHolder(ModConfig.class).getConfig();
 		if (!config.modded.titleScreen) return false;
-		return client.method_24289();
+		return client.isModded();
 	}
 }
