@@ -1,5 +1,5 @@
 plugins {
-	id "fabric-loom" version "0.2.6-SNAPSHOT"
+	id "fabric-loom" version "0.4-SNAPSHOT"
 	id "maven-publish"
 }
 
@@ -10,13 +10,10 @@ archivesBaseName = project.archives_base_name
 version = project.mod_version
 group = project.maven_group
 
-minecraft {
-}
-
 repositories {
 	maven {
 		name = "CottonMC"
-		url = "http://server.bbkr.space:8081/artifactory/libs-snapshot"
+		url = "https://server.bbkr.space/artifactory/libs-snapshot"
 	}
 	maven {
 		name = "Fabric"
@@ -39,13 +36,13 @@ dependencies {
 	modImplementation("net.fabricmc:fabric-loader:${project.loader_version}")
 
 	// Configuration
-	modImplementation("me.shedaniel.cloth:config-2:2.6.5")
-	include("me.shedaniel.cloth:config-2:2.6.5")
+	modImplementation("me.shedaniel.cloth:config-2:${project.cloth_config_version}")
+	include("me.shedaniel.cloth:config-2:${project.cloth_config_version}")
 
-	modImplementation("me.sargunvohra.mcmods:autoconfig1u:1.2.4")
-	include("me.sargunvohra.mcmods:autoconfig1u:1.2.4")
+	modImplementation("me.sargunvohra.mcmods:autoconfig1u:${project.auto_config_version}")
+	include("me.sargunvohra.mcmods:autoconfig1u:${project.auto_config_version}")
 
-	modImplementation("io.github.prospector:modmenu:1.8.5+build.23")
+	modImplementation("io.github.prospector:modmenu:${project.mod_menu_version}")
 }
 
 processResources {
