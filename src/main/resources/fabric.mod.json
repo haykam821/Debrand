@@ -1,39 +1,39 @@
 {
-	"schemaVersion": 1,
-	"id": "debrand",
-	"version": "${version}",
+    "schemaVersion": 1,
+    "id": "debrand",
+    "version": "${version}",
 
-	"name": "Debrand",
-	"description": "Removes the modded notice on the window title and title screen.",
-	"authors": [
-		"haykam821"
-	],
-	"contact": {
-		"homepage": "https://github.com/haykam821/Debrand#readme",
-		"issues": "https://github.com/haykam821/Debrand/issues"
-	},
+    "name": "Debrand",
+    "description": "Removes the modded notice on the window title and title screen.",
+    "authors": [
+        "haykam821"
+    ],
+    "contact": {
+        "homepage": "https://www.curseforge.com/minecraft/mc-mods/debrand",
+        "issues": "https://github.com/haykam821/Debrand/issues"
+    },
 
-	"license": "MIT",
-	"icon": "assets/debrand/icon.png",
+    "license": "MIT",
+    "icon": "assets/debrand/icon.png",
 
-	"environment": "client",
-	"entrypoints": {
-		"main": [
-			"io.github.haykam821.debrand.Main"
-		],
-		"modmenu": [
-			"io.github.haykam821.debrand.config.ModMenuCompatibility"
-		]
-	},
-	"mixins": [
-		"debrand.mixins.json"
-	],
+    "environment": "client",
+    "entrypoints": {
+        "main": [
+            "io.github.haykam821.debrand.Main"
+        ],
+        "modmenu": [
+            "io.github.haykam821.debrand.config.ModMenuCompatibility"
+        ]
+    },
+    "mixins": [
+        "debrand.mixins.json"
+    ],
 
-	"depends": {
-		"fabricloader": ">=0.4.0",
-		"fabric": "*"
-	},
-	"suggests": {
-		"modmenu": "*"
-	}
+    "depends": {
+        "fabricloader": ">=0.4.0",
+        "fabric": "*"
+    },
+    "suggests": {
+        "modmenu": "*"
+    }
 }
