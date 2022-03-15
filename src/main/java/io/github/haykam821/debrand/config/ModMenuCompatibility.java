@@ -10,12 +10,12 @@ import net.fabricmc.api.Environment;
 @Environment(EnvType.CLIENT)
 public class ModMenuCompatibility implements ModMenuApi {
 
-    public String getModId() {
-        return "debrand";
-    }
+  public String getModId() {
+    return "debrand";
+  }
 
-    @Override
-    public ConfigScreenFactory<?> getModConfigScreenFactory() {
-        return screen -> AutoConfig.getConfigScreen(ModConfig.class, screen).get();
-    }
+  @Override
+  public ConfigScreenFactory<?> getModConfigScreenFactory() {
+    return screen -> AutoConfig.getConfigScreen(ModConfig.class, screen).get();
+  }
 }
