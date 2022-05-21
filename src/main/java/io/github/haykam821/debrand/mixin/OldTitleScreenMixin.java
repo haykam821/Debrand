@@ -5,14 +5,14 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
 import io.github.haykam821.debrand.Main;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.TitleScreen;
-import net.minecraft.util.ModStatus;
 
 @Mixin(TitleScreen.class)
-public class TitleScreenMixin {
-	@Redirect(method = "render", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/ModStatus;isModded()Z"))
-	public boolean isModded(ModStatus modStatus) {
+public class OldTitleScreenMixin {
+	@Redirect(method = "render", at = @At(value = "INVOKE", target = "Lnet/minecraft/class_310;method_24289()Z", remap = false))
+	public boolean isModded(MinecraftClient client) {
 		if (!Main.CONFIG.modded.titleScreen) return false;
-		return modStatus.isModded();
+		return ((OldMinecraftClientAccessor) (Object) client).isModded();
 	}
 }

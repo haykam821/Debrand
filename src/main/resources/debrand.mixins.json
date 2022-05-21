@@ -2,8 +2,12 @@
 	"required": true,
 	"package": "io.github.haykam821.debrand.mixin",
 	"compatibilityLevel": "JAVA_8",
+	"plugin": "io.github.haykam821.debrand.mixin.DebrandMixinConfigPlugin",
 	"client": [
 		"MinecraftClientMixin",
+		"OldMinecraftClientAccessor",
+		"OldMinecraftClientMixin",
+		"OldTitleScreenMixin",
 		"TitleScreenMixin"
 	],
 	"injectors": {

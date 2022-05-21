@@ -6,13 +6,12 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 import io.github.haykam821.debrand.Main;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.util.ModStatus;
 
 @Mixin(MinecraftClient.class)
-public class MinecraftClientMixin {
-	@Redirect(method = "getWindowTitle", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/ModStatus;isModded()Z"))
-	public boolean isModded(ModStatus modStatus) {
+public abstract class OldMinecraftClientMixin {
+	@Redirect(method = "getWindowTitle", at = @At(value = "INVOKE", target = "Lnet/minecraft/class_310;method_24289()Z", remap = false))
+	public boolean isModded(MinecraftClient client) {
 		if (!Main.CONFIG.modded.windowTitle) return false;
-		return modStatus.isModded();
+		return ((OldMinecraftClientAccessor) (Object) client).isModded();
 	}
 }
