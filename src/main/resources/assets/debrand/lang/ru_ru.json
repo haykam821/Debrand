@@ -1,0 +1,8 @@
+{
+	"text.autoconfig.debrand.title": "Настройки Debrand",
+	"text.autoconfig.debrand.category.modded": "Индикация модифицирования",
+	"text.autoconfig.debrand.option.modded.windowTitle": "Заголовок окна",
+	"text.autoconfig.debrand.option.modded.windowTitle.@Tooltip": "Если включено, в заголовке окна будет отображаться звёздочка.",
+	"text.autoconfig.debrand.option.modded.titleScreen": "Начальный экран",
+	"text.autoconfig.debrand.option.modded.titleScreen.@Tooltip": "Если включено, в левом нижнем углу начального экрана будет сообщаться о модифицировании игры."
+}
