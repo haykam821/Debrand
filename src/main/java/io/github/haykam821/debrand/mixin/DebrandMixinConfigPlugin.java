@@ -18,10 +18,13 @@ import net.fabricmc.loader.api.metadata.version.VersionPredicate;
 
 public class DebrandMixinConfigPlugin implements IMixinConfigPlugin {
 	public static final boolean HAS_MOD_STATUS = isMinecraftVersion(">=1.18-alpha.21.41.a");
+	public static final boolean HAS_DRAW_CONTEXT = isMinecraftVersion(">=1.20-alpha.23.16.a");
 
 	private static final String OLD_CLIENT_ACCESSOR_CLASS = "io.github.haykam821.debrand.mixin.OldMinecraftClientAccessor";
 	private static final String OLD_CLIENT_CLASS = "io.github.haykam821.debrand.mixin.OldMinecraftClientMixin";
 	private static final String OLD_TITLE_SCREEN_CLASS = "io.github.haykam821.debrand.mixin.OldTitleScreenMixin";
+
+	private static final String MATRIX_STACK_TITLE_SCREEN_CLASS = "io.github.haykam821.debrand.mixin.MatrixStackTitleScreenMixin";
 
 	private static final String NEW_CLIENT_CLASS = "io.github.haykam821.debrand.mixin.MinecraftClientMixin";
 	private static final String NEW_TITLE_SCREEN_CLASS = "io.github.haykam821.debrand.mixin.TitleScreenMixin";
@@ -40,8 +43,12 @@ public class DebrandMixinConfigPlugin implements IMixinConfigPlugin {
 	public boolean shouldApplyMixin(String targetClass, String mixinClass) {
 		if (mixinClass.equals(OLD_CLIENT_ACCESSOR_CLASS) || mixinClass.equals(OLD_CLIENT_CLASS) || mixinClass.equals(OLD_TITLE_SCREEN_CLASS)) {
 			return !HAS_MOD_STATUS;
-		} else if (mixinClass.equals(NEW_CLIENT_CLASS) || mixinClass.equals(NEW_TITLE_SCREEN_CLASS)) {
+		} else if (mixinClass.equals(MATRIX_STACK_TITLE_SCREEN_CLASS)) {
+			return HAS_MOD_STATUS && !HAS_DRAW_CONTEXT;
+		} else if (mixinClass.equals(NEW_CLIENT_CLASS)) {
 			return HAS_MOD_STATUS;
+		} else if (mixinClass.equals(NEW_TITLE_SCREEN_CLASS)) {
+			return HAS_MOD_STATUS && HAS_DRAW_CONTEXT;
 		}
 
 		return true;

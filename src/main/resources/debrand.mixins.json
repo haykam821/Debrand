@@ -4,6 +4,7 @@
 	"compatibilityLevel": "JAVA_8",
 	"plugin": "io.github.haykam821.debrand.mixin.DebrandMixinConfigPlugin",
 	"client": [
+		"MatrixStackTitleScreenMixin",
 		"MinecraftClientMixin",
 		"OldMinecraftClientAccessor",
 		"OldMinecraftClientMixin",
